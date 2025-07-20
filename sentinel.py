@@ -44,7 +44,12 @@ import subprocess
 import re
 import json
 from collections import Counter, defaultdict
-import gps
+try:
+    import gps
+    # GPS code here
+except ImportError:
+    print("GPS module not found; running without location tracking.")
+    gps = None  # Fallback
 import inspect
 from functools import wraps
 from cachetools import TTLCache
