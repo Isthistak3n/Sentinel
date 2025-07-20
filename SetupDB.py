@@ -121,10 +121,10 @@ GROUP BY
     for table_name, query in table_queries.items():
         print(f"Command found: {table_name}")
         #if table_name in ('vPacket','PacketTag','Tag'):
-            print("Executing command...")
-            cursor.execute(query)
-            print("done")
-            print(f"Object '{table_name}' created successfully in the database.")
+        print("Executing command...")
+        cursor.execute(query)
+        print("done")
+        print(f"Object '{table_name}' created successfully in the database.")
 
     # Commit the changes and close the connection
     conn.commit()
